@@ -47,6 +47,9 @@ target_include_directories(${PROJECT_NAME} PUBLIC include)
 
 add_subdirectory(glm)
 target_link_libraries(${PROJECT_NAME} PUBLIC glm)
+
+option(GLFW_BUILD_WAYLAND "default not to use wayland" 0)
+option(GLFW_BUILD_X11 "default to use x11" 1)
 add_subdirectory(glfw)
 target_link_libraries(${PROJECT_NAME} PUBLIC glfw)
 add_subdirectory(glad)
